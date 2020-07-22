@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
 }
@@ -16,7 +18,8 @@ body {
 
 header {
     width: 100%;
-    background-color: #000;
+    background: rgb(7, 7, 124);
+    background: linear-gradient(180deg, rgba(7, 7, 124, 1) 14%, rgba(1, 7, 27, 1) 25%, rgba(0, 7, 9, 1) 83%, rgba(5, 7, 86, 1) 86%);
     display: flex;
 }
 
@@ -43,6 +46,11 @@ nav {
     font-weight: bold;
 }
 
+nav #myTopnav a:hover {
+    color: rgb(177, 233, 25);
+    border-bottom: 3px solid rgb(177, 233, 25);
+}
+
 .topnav a:hover {
     border-bottom: 3px solid rgb(177, 233, 25);
 
@@ -52,61 +60,215 @@ nav {
     display: none;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main .main_welcome {
+    background: rgb(7, 7, 124);
+    background: radial-gradient(circle, rgba(7, 7, 124, 1) 14%, rgba(1, 7, 27, 1) 55%, rgba(0, 7, 9, 1) 58%, rgba(5, 7, 86, 1) 81%);
+
+    text-align: center;
+    padding: 200px 0 410px 0;
+}
+
+main .main_welcome p {
+    color: rgb(252, 252, 252);
+    font-size: 20px;
+}
+
+main .main_welcome h1 {
+    color: rgb(252, 252, 252);
+    font-size: 44px;
+    font-weight: bold;
+    font-style: initial;
+}
+
+.mycompany {
+    color: rgb(177, 233, 25);
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .main_about {
+    display: flex;
+    padding: 100px 0 100px 0;
+}
+
+.about_right {
+    margin-left: 140px;
+
+}
+
+.about_right h1 {
+    display: inline-block;
+    border-bottom: 3px solid rgb(177, 233, 25);
+    padding-bottom: 20px;
+
+}
+
+.about_right p {
+    margin: 30px 0 50px 0;
+    color: rgb(2, 2, 24);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about_right li {
+    background: url(../image/mark.png) 0px no-repeat;
+    padding-left: 25px;
+    color: rgb(2, 2, 24);
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.pract {
+    font-weight: 800;
+}
+
+.better 
+{
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(255, 1, 1);
+}
+
+.mw-100 {
+    min-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*------ Media запросы размер гаджета */
 
 @media screen and (max-width: 1200px) {
     nav {
         margin-left: 20%;
-    }
-}
-
-@media screen and (max-width: 1105px) {
-    nav {
-        margin-left: 10%;
-    }
-}
-
-
-
-@media screen and (max-width: 1010px) {
-    .topnav a {
-        display: none;
 
     }
-    .topnav a.icon {
-        float: right;
-        margin-top: -17px;
-        display: block;
-        color: beige;
+
+    .topnav a:hover {
+        border-bottom: 3px solid rgb(177, 233, 25);
+    }
+
+    @media screen and (max-width: 1105px) {
+        nav {
+            margin-left: 10%;
+        }
+    }
+
+
+
+    @media screen and (max-width: 1010px) {
+        .topnav a {
+            display: none;
+
+        }
+
+        .topnav a.icon {
+            float: right;
+            margin-top: -17px;
+            display: block;
+            color: beige;
+            font-size: 25px;
+        }
+
+        nav {
+            width: 100%;
+
+        }
+
+        .topnav.responsive {
+            position: relative;
+            top: 50px;
+            left: -100px;
+        }
+
+        header.topnav.responsive {
+            height: 340px;
+        }
+
+        .topnav.responsive a.icon {
+            position: absolute;
+            top: -50px;
+            right: -100px;
+        }
+
+        .topnav.responsive a {
+            float: initial;
+            display: block;
+            text-align: right;
+        }
+
+    }
+
+    /* main and content */
+
+    main .main_welcome {
+        padding: 50px;
+    }
+
+    .main_welcome p {
+        font-size: 14px;
+    }
+
+    .main_welcome h1 {
         font-size: 25px;
     }
 
-    nav {
-        width: 100%;
-
-    }
-    .topnav.responsive {
-        position: relative;
-        top: 50px;
-        left: -200px;
-    }
-    
-    header.topnav.responsive {
-        height: 340px;
+    .mw-100 {
+        max-width: 100%;
     }
 
-    .topnav.responsive a.icon {
-        position: absolute;
-        top: -50px;
-        right: -200px;
+    .main_about {
+        flex-direction: column;
     }
 
-    .topnav.responsive a {
-        float: none;
-        display: block;
+    .about_right {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .about_right li {
         text-align: left;
+
+    }
+
+    .about_right h1 {
+        font-size: 25px;
+        margin-top: 10px;
     }
 
 }
-
